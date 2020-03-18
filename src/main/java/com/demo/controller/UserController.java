@@ -61,7 +61,7 @@ public class UserController {
     @RequestMapping("delUser")
     public String removeUser(Model model,Integer id){
         model.addAttribute("user",userService.deleteUser(id));
-        //userService.deleteUser(id);
+        userService.deleteUser(id);
         return "redirect:/user/getAllUser";
     }
 

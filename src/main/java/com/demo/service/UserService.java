@@ -4,6 +4,9 @@ import com.demo.bean.User;
 
 import java.util.List;
 
+/**
+ * @author bubblechou
+ */
 public interface UserService {
     User findUserById(Integer id);
 

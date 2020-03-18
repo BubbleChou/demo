@@ -3,7 +3,9 @@ package com.demo.dao;
 import com.demo.bean.User;
 
 import java.util.List;
-
+/**
+ * @author bubblechou
+ */
 public interface UserDao {
     User findUserById(Integer id);
 
