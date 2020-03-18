@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demo.dao.UserDao">
+    <select id="findUserById" resultType="com.demo.bean.User" parameterType="Integer">
+        select id,name,sex,age from user where id=#{id}
+    </select>
+
+    <select id="findAll" resultType="com.demo.bean.User">
+        select id,name,sex,age from user
+    </select>
+
+    <!--新增-->
+    <insert id="saveUser" parameterType="com.demo.bean.User">
+        insert into user(id,name,sex,age) values(#{id},#{name},#{sex},#{age})
+    </insert>
+
+    <!--删除-->
+    <delete id="deleteUser" parameterType="int">
+        delete from user where id=#{id}
+    </delete>
+
+    <!--修改-->
+    <update id="updateUser" parameterType="com.demo.bean.User">
+        update user set name=#{name},sex=#{sex},age=#{age} where id=#{id}
+    </update>
+</mapper>
