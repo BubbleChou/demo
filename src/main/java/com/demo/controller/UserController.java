@@ -9,7 +9,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-
+/**
+ * @author bubblechou
+ */
 @Controller
 @RequestMapping("/user")
 public class UserController {
